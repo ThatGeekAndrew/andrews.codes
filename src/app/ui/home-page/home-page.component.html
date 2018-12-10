@@ -1,20 +1,350 @@
-<h1>Welcome to Firestarter</h1>
+<header #hoverContainer class="hero" id="top">
+    <div class="container">
+        <h1 class="mat-display-4">Andrew Alsante</h1>
+        <p class="mat-lead">Web Application Developer, Designer & Consultant</p>
+        <button [ngx-scroll-to]="'#intro'" mat-button color="default">Learn More</button>
+        <button (click)="viewSchedule()" mat-raised-button color="accent">Schedule Meeting</button>
 
-<a href="https://slackin-pbfjhfxnsa.now.sh"><img src="https://slackin-pbfjhfxnsa.now.sh/badge.svg"></a><br>
-<a href="https://circleci.com/gh/codediodeio/angular-firestarter"><img src="https://circleci.com/gh/codediodeio/angular-firestarter.svg?style=svg"></a>
 
-<p>I am a Progressive Web App (PWA) built with Angular and Firebase.</p>
+        <!-- <div #hoverLaptop class="slide laptop"></div>
+        <div #hoverIcon class="slide hover-icon"></div> -->
+    </div>
+</header>
+<section id="intro" class="introduction">
+    <div class="container">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between center">
+            <h2 class="mat-display-3">
+                Overview
+            </h2>
+            <div>
+                <button (click)="viewSchedule()" class="meeting" mat-stroked-button color="primary">Schedule Meeting</button>
+                <a href="/assets/AndrewAlsanteResume.pdf" class="meeting" target="_blank" mat-flat-button color="primary">View Resume</a>
+            </div>
+        </div>
+        <mat-tab-group mat-align-tabs="start">
+            <mat-tab label="Services">
+                <ng-template mat-tab-label>
+                    <i class="fas fa-code fa-lg"></i>
+                    Philosophy
+                </ng-template>
+                
+                <div class="tabbed-content" fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
+                    <div>
+                        <h3 class="mat-display-2">
+                            A "User First" Approach
+                        </h3>
+                        <p>
+                            The web is one of the most important mediums that businesses can operate in.
+                            Users have very high expectations from destinations they choose to do business with.
+                            There's a nearly endless list of things that you could and should be doing to optimize your strategy and increase growth.
+                            Everyday, new trends, technologies, and ways of engaging your customers become available.
+                            It's my job to assess what's out there, and impliment solutions responsibly to best meet my clients goals and help maintain their users trust.
+                        </p>
+                        <h3 class="mat-display-2">
+                            Intuitive Design
+                        </h3>
+                        <p>
+                            One of my favorite aspects of building websites and apps has to do with layout.
+                            It's so important that you present your users with the information they need right away.
+                            That can be much easier said than done, especially when you have many goals that you're trying to meet.
+                            I can work with you to better understand who's using your services and where you might be losing them.
+                        </p>
+                        <h3 class="mat-display-2">
+                            Collaborative Coding
+                        </h3>
+                        <p>
+                            I am extremely particular about the software I use, and how I use it.
+                            There are thousands of solutions that can accomplish the same task.
+                            It's easy to get caught up in the short term and take the quickest, or cheapest route.
+                            The concept of "technical debt" is one that a lot of developers worry about and many business owners realize only once it's too late.
+                            I work with my clients to help them understand their aspirations in both long and short term, and choose the most appropriate set of technologies to impliment or create.
+                        </p>
+                    </div>
+                        
+                    <mat-accordion>
+                        <mat-expansion-panel [expanded]="true">
 
-<h2>Have Questions?</h2>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Technologies
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+    
+                            <p>I use a variety of popular technologies, frameworks and libraries to achieve the best quality in my work, efficently and with the support of some of the largest developer communities around.</p>
+    
+                            <h4>Front End</h4>
+                            <span fxLayout="row" fxLayoutAlign="space-around center" class="fa-3x">
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" matTooltip="Learn about HTML5">
+                                    <i style="color: chocolate" class="fab fa-html5"></i>
+                                </a>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" matTooltip="Learn about CSS">
+                                    <i style="color: royalblue" class="fab fa-css3-alt"></i>
+                                </a>
+                                <a href="https://wordpress.com/" target="_blank" matTooltip="Learn about Sass">
+                                    <i style="color: magenta" class="fab fa-sass"></i>
+                                </a>
+                                <a href="https://wordpress.com/" target="_blank" matTooltip="Learn about Less">
+                                    <i style="color: darkslategray" class="fab fa-less"></i>
+                                </a>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" matTooltip="Learn about JavaScript">
+                                    <i style="color: #f8de22" class="fab fa-js-square"></i>
+                                </a>
+                                <a href="https://angular.io/" target="_blank" matTooltip="Learn about Angular">
+                                    <i style="color: red" class="fab fa-angular"></i>
+                                </a>
+                            </span>
+                            
+                            <h4>Back End</h4>
+    
+                            <span fxLayout="row" fxLayoutAlign="space-around center" class="fa-3x">
+                                <a href="https://www.nodejs.org/en/about/" target="_blank" matTooltip="Learn about Node.js">
+                                    <i style="color: #6cc24a" class="fab fa-node-js"></i>
+                                </a>
+                                <a href="http://php.net/" target="_blank" matTooltip="Learn about PHP">
+                                    <i style="color: #4f5b93" class="fab fa-php"></i>
+                                </a>
+                                <a href="https://git-scm.com/" target="_blank" matTooltip="Learn about Git">
+                                    <i style="color: #c9510c" class="fab fa-git"></i>
+                                </a>
+                                <a href="https://www.drupal.org/" target="_blank" matTooltip="Learn about Drupal">
+                                    <i style="color: #0678BE" class="fab fa-drupal"></i>
+                                </a>
+                                <a href="https://wordpress.com/" target="_blank" matTooltip="Learn about WordPress">
+                                    <i style="color: #21759b" class="fab fa-wordpress"></i>
+                                </a>
+                            </span>
+    
+                        </mat-expansion-panel>
+                        <mat-expansion-panel>
 
-<p>
-    <i class="fa fa-slack fa-lg"></i> Let's talk on the <a target="blank" href="https://goo.gl/qF8Q5r">
-  Angular Firebase Developers Slack Team
-</a>
-</p>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Services
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
 
-<h2>Free Open Source Screencasts</h2>
+                            <h4>Design</h4>
+                            <ul>
+                                <li>Theming & Color Schemes</li>
+                                <li>Logos & Brand Assets</li>
+                                <li>Marketing & Promotional Materials</li>
+                                <li>SVG Patterns & Graphics</li>
+                            </ul>
+    
+                            <h4>Development</h4>
+                            <ul>
+                                <li>Static HTML & CSS</li>
+                                <li>Landing & Product Pages</li>
+                                <li>eCommerce & Content Management Systems</li>
+                                <li>JavaScript Applications</li>
+                                <li>API Integration</li>
+                            </ul>
+    
+                            <h4>And More</h4>
+                            <ul>
+                                <li>Hosting & SEO</li>
+                                <li>Technical Documentation</li>
+                                <li>Social Media Content</li>
+                                <li>Copywriting</li>
+                            </ul>
 
-<p>
-    <i class="fa fa-youtube fa-lg"></i> Subscribe to the <a href="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">AngularFirebase YouTube Channel</a> for weekly lessons.
-</p>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+            </mat-tab>
+            <mat-tab label="Professional">
+
+                <ng-template mat-tab-label>
+                    <i class="fas fa-user-tie fa-lg"></i>
+                    Professional
+                </ng-template>
+
+                <div class="tabbed-content" fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
+                    <div>
+                        <img src="/assets/images/profile.jpg" class="mat-elevation-z2" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            I have over 6 years of experience building websites & applications. I began simply to make my own unique MySpace themes as far back as 2006, using not much more than static HTML, CSS, and copy & paste JavaScript. Soon after my interests expanded and I picked up PHP and began exploring frameworks such as Drupal, and more recently WordPress. I picked up Node.js around mid 2015 and over time have become extremely familiar with the Javascript ecosystem. I now mostly work with Angular, and with a few other related technologies that have proven to scale well and meet high demands. I work well on teams both large and small, or even on my own.
+                        </p>
+                        <p>
+                            My focus has mostly been involved with designing user interfaces that can meet web accessibility, compatibility, and security standards. It is also very important to me that information is organized and presented clearly, with intent and solid design principles in mind. I leverage my skills in Web Development, Graphic Design, and various creative outlets to achieve those goals.
+                        </p>
+                        
+        
+                        <p>If you'd like to follow me professionally, I use these platforms:</p>
+                        <div class="social-buttons">
+                            <a href="https://github.com/geeksmarter" target="_blank" class="social btn-github" mat-raised-button>
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                            <a href="https://linkedin.com/in/thatgeekandrew" target="_blank" class="social btn-linkedin" mat-raised-button>
+                                <i class="fab fa-linkedin-in"></i>
+                                LinkedIn
+                            </a>
+                            <a href="https://codepen.com/geeksmarter" target="_blank" class="social btn-codepen" mat-raised-button>
+                                <i class="fab fa-codepen"></i>
+                                CodePen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </mat-tab>
+            <mat-tab label="Personal">
+                <ng-template mat-tab-label>
+                    <i class="fas fa-user-circle fa-lg"></i>
+                    Personal
+                </ng-template>
+
+                <div class="tabbed-content" fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
+                    <div>
+                        <img src="/assets/images/connieandandrew.jpg" class="mat-elevation-z2" alt="">
+                    </div>
+                    <div>
+                        <p>
+                            I am 27 years old and live in Upstate New York with my girlfriend, Connie. I play <a href="https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal.ws?user1=level-123">Old School RuneScape</a>, and occasionally go on Xbox Live. Sometimes I will <em title="AKA: Memes">create original content for the internet</em>. Every now and then I contribute to Facebook's 1337 language  translations, which end up in front of 25+ million users per month.
+                        </p>
+        
+                        <p>These profiles are just for fun:</p>
+                        <div class="social-buttons">
+                            <a href="https://facebook.com/thatgeekandrew" target="_blank" class="social btn-facebook" mat-raised-button>
+                                <i class="fab fa-facebook"></i>
+                                Facebook
+                            </a>
+                            <a href="https://linkedin.com/in/thatgeekandrew" target="_blank" class="social btn-twitter" mat-raised-button>
+                                <i class="fab fa-twitter"></i>
+                                Twitter
+                            </a>
+                            <a href="https://www.snapchat.com/add/thatgeekandrew" target="_blank" class="social btn-snapchat" mat-raised-button>
+                                <i class="fab fa-snapchat"></i>
+                                Snapchat
+                            </a>
+                            <br>
+                            <a href="https://twitch.tv/alsante" target="_blank" class="social btn-twitch" mat-raised-button>
+                                <i class="fab fa-codepen"></i>
+                                Twitch
+                            </a>
+                            <a href="https://live.xbox.com/en-US/Profile?gamertag=thatgeekandrew" target="_blank" class="social btn-xbox" mat-raised-button>
+                                <i class="fab fa-codepen"></i>
+                                Xbox Live
+                            </a>
+                            <a href="https://open.spotify.com/user/12173439619" target="_blank" class="social btn-spotify" mat-raised-button>
+                                <i class="fab fa-codepen"></i>
+                                Spotify
+                            </a>
+                        </div>
+
+                        <p>If you'd like to contact me for business, please refer to these channels:</p>
+                        <div class="social-buttons">
+                            <a href="https://github.com/geeksmarter" target="_blank" class="social btn-github" mat-raised-button>
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                            <a href="https://linkedin.com/in/thatgeekandrew" target="_blank" class="social btn-linkedin" mat-raised-button>
+                                <i class="fab fa-linkedin-in"></i>
+                                LinkedIn
+                            </a>
+                            <a href="https://codepen.com/geeksmarter" target="_blank" class="social btn-codepen" mat-raised-button>
+                                <i class="fab fa-codepen"></i>
+                                CodePen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</section>
+
+<section class="portfolio">
+    <div class="container">
+        <h3 class="mat-display-3">
+            Portfolio
+        </h3>
+
+        <mat-grid-list cols="3" rowHeight="1:1">
+            <a (click)="viewCase(caseView, project)" *ngFor="let project of caseStudies">
+                <mat-grid-tile matRipple [matRippleColor]="accent" rowspan="{{ project.rowspan }}" colspan="{{ project.colspan }}">
+                    <img *ngIf="project.image" src="{{ project.image }}" alt="">
+                    <img *ngIf="!project.image" src="/assets/images/geeksmarter.png" alt="">
+                    <mat-grid-tile-footer>{{ project.name }}</mat-grid-tile-footer>
+                </mat-grid-tile>
+            </a>
+
+            <mat-grid-tile *ngIf="!caseStudies">
+                Coming Soon
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</section>
+
+<!-- <section class="email-subscribe">
+    <div class="container">
+        <mat-card>
+            <img src="/assets/images/podium.svg" width="90px" alt="">
+            <div>
+                <h2 class="mat-display-1">I'm starting a blog!</h2>
+                <p class="caption">Get notified when I release new content on <a href="https://www.geeksmarter.com/">Geek Smarter</a>.</p>
+                <mat-form-field class="full-width">
+                    <input matInput type="email" placeholder="Email Address">
+                </mat-form-field>
+                <button mat-raised-button color="primary">Subscribe</button>
+            </div>
+        </mat-card>
+    </div>
+</section> -->
+
+<ng-template #caseView>
+    <h2 mat-dialog-title>{{ caseStudy.name }}</h2>
+    <div mat-dialog-content fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
+        <div *ngIf="caseStudy.image" >
+            <img class="case-image" src="{{ caseStudy.image }}" alt="">
+        </div>
+        <div>
+            <h3>Overview</h3>
+            <p *ngIf="caseStudy.date_start">{{ caseStudy.date_start | date : mediumDate }} - {{ caseStudy.date_end | date : mediumDate }}</p>
+            <p *ngIf="caseStudy.overview">{{ caseStudy.overview }}</p>
+            <mat-chip-list>
+                <mat-chip *ngFor="let cat of caseStudy.categories" color="accent">{{ cat }}</mat-chip>
+            </mat-chip-list>
+                
+            <div *ngIf="caseStudy.context">
+                <h3>Context</h3>
+                <p>{{ caseStudy.context }}</p>
+            </div>
+            <div *ngIf="caseStudy.strategy">
+                <h3>Strategy</h3>
+                <p>{{ caseStudy.strategy }}</p>
+            </div>
+            <div *ngIf="caseStudy.testimonial">
+                <h3>Testimonial</h3>
+                <p>{{ caseStudy.testimonial }}</p>
+            </div>
+
+            <div *ngIf="!caseStudy.context && !caseStudy.strategy && !caseStudy.testimonial">
+                <h3>Full Case Study Coming Soon!</h3>
+                <p align="center"><img src="/assets/images/writeup.png" alt=""></p>
+            </div>
+        </div>
+    </div>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close [mat-dialog-close]="true">Cancel</button>
+        <a *ngIf="caseStudy.url" href="{{ caseStudy.url }}" target="_blank" mat-raised-button color="primary">
+            <mat-icon>link</mat-icon>
+            View Project
+        </a>
+    </mat-dialog-actions>
+</ng-template>
+
+<ng-template #scheduleMeeting>
+    <h2 mat-dialog-title>Schedule a meeting with Andrew!</h2>
+    <div class="iframe-dialog" mat-dialog-content>
+        <iframe class="calendly-frame" src="https://calendly.com/andrewscodes" frameborder="0"></iframe>
+    </div>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>No Thanks</button>
+    </mat-dialog-actions>
+</ng-template>

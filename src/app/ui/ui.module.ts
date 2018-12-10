@@ -12,8 +12,57 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { SsrPageComponent } from './ssr-page/ssr-page.component';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+
+import {
+  MatToolbarModule,
+  MatSidenavModule,
+  MatButtonModule,
+  MatCheckboxModule,
+  MatSlideToggleModule,
+  MatMenuModule,
+  MatIconModule,
+  MatCardModule,
+  MatBadgeModule,
+  MatListModule,
+  MatInputModule,
+  MatGridListModule,
+  MatTooltipModule,
+  MatDialogModule,
+  MatTabsModule,
+  MatExpansionModule,
+  MatRippleModule,
+  MatChipsModule,
+} from '@angular/material';
+
 @NgModule({
-  imports: [CommonModule, RouterModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    ReactiveFormsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatSlideToggleModule,
+    MatMenuModule,
+    MatIconModule,
+    MatCardModule,
+    MatBadgeModule,
+    MatListModule,
+    MatInputModule,
+    MatGridListModule,
+    MatTooltipModule,
+    MatDialogModule,
+    MatTabsModule,
+    MatExpansionModule,
+    MatRippleModule,
+    MatChipsModule,
+    FlexLayoutModule,
+    ScrollToModule.forRoot(),
+  ],
   declarations: [
     UserLoginComponent,
     HomePageComponent,
@@ -22,7 +71,7 @@ import { SsrPageComponent } from './ssr-page/ssr-page.component';
     NotificationMessageComponent,
     UserProfileComponent,
     UserFormComponent,
-    SsrPageComponent
+    SsrPageComponent,
   ],
   exports: [
     MainNavComponent,

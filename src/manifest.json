@@ -1,8 +1,8 @@
 {
-  "name": "firestarter",
-  "short_name": "firestarter",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "andrews.codes",
+  "short_name": "andrews.codes",
+  "theme_color": "#263238",
+  "background_color": "#263238",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",

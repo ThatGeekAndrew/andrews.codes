@@ -1,13 +1,21 @@
-nav {
-    border-bottom: 1px solid #E4E4E4;
-    box-shadow: 0 0 4px rgba(0, 0, 0, .1), 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 25px;
-}
+mat-toolbar {
+  height: 64px;
 
-.navbar-brand {
-    padding: 0 3em 0 2em;
-}
+  .logo {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2em;
 
-.navbar-menu {
-    padding-right: 3em;
+    img {
+      width: 35px;
+      margin-left: 10px;
+      margin-right: 5px;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .text-logo {
+      display: none;
+  }
 }

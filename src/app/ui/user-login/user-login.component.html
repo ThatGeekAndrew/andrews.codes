@@ -1,47 +1,34 @@
-<h1>Firebase User Auth Demo</h1>
 
-<p>
-  Learn more about 
-  <a href="https://angularfirebase.com/tag/authentication">Firebase auth strategies</a>.
-</p>
-<hr>
+<mat-action-list *ngIf="!(auth.user | async);">
 
-<div *ngIf="!(auth.user | async); else alreadyLoggedIn">
-
-  <h3>Social Login</h3>
-
-    <button (click)="signInWithGoogle()" class="button btn-social btn-google">
-      <i class="fa fa-google fa-lg"></i> Connect Google
+    <button mat-list-item (click)="signInWithGoogle()">
+      Connect Google
+      <span style="flex: 1 1;"></span>
+      <i class="fab fa-google fa-lg"></i>
     </button>
 
-    <button (click)="signInWithGithub()" class="button btn-social btn-github" disabled>
-      <i class="fa fa-github fa-lg"></i> Connect GitHub
+    <button mat-list-item (click)="signInWithGithub()">
+      Connect GitHub
+      <span style="flex: 1 1;"></span>
+      <i class="fab fa-github fa-lg"></i>
     </button>
 
-    <button (click)="signInWithFacebook()" class="button  btn-social btn-facebook" disabled>
-      <i class="fa fa-facebook fa-lg"></i> Connect Facebook
+    <button mat-list-item (click)="signInWithFacebook()">
+        Connect Facebook
+      <span style="flex: 1 1;"></span>
+      <i class="fab fa-facebook fa-lg"></i>
     </button>
 
-    <button (click)="signInWithTwitter()" class="button  btn-social btn-twitter" disabled>
-      <i class="fa fa-twitter fa-lg"></i> Connect Twitter
+    <button mat-list-item (click)="signInWithTwitter()">
+        Connect Twitter
+        <span style="flex: 1 1;"></span>
+      <i class="fab fa-twitter fa-lg"></i>
     </button>
 
-    <hr>
+    <button mat-list-item (click)="signInAnonymously()">
+        Connect Anonymously
+        <span style="flex: 1 1;"></span>
+      <i class="fas fa-user-secret fa-lg"></i>
+    </button>
+</mat-action-list>
 
-    <h3>Anonymous Login</h3>
-
-      <button (click)="signInAnonymously()" class="button button-info">
-        <i class="fa fa-user-secret fa-lg"></i> Connect Anonymously
-      </button>
-
-    <hr>
-
-    <user-form></user-form>
-
-</div>
-
-<ng-template #alreadyLoggedIn>
-  <p class="text-success">
-    You are logged in <i class="fa fa-thumbs-up"></i>
-  </p>
-</ng-template>

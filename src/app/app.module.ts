@@ -22,6 +22,33 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireFunctionsModule } from '@angular/fire/functions';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+
+import {
+  MatToolbarModule,
+  MatSidenavModule,
+  MatButtonModule,
+  MatCheckboxModule,
+  MatSlideToggleModule,
+  MatMenuModule,
+  MatIconModule,
+  MatCardModule,
+  MatBadgeModule,
+  MatListModule,
+  MatInputModule,
+  MatGridListModule,
+  MatTooltipModule,
+  MatDialogModule,
+  MatTabsModule,
+  MatExpansionModule,
+  MatRippleModule,
+  MatChipsModule,
+} from '@angular/material';
+
 // IMPORTANT
 // Add your own project credentials to environments/*.ts
 
@@ -40,6 +67,27 @@ import { AngularFireFunctionsModule } from '@angular/fire/functions';
     AngularFireAuthModule,
     AngularFireStorageModule,
     AngularFireFunctionsModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatSlideToggleModule,
+    MatMenuModule,
+    MatIconModule,
+    MatCardModule,
+    MatBadgeModule,
+    MatListModule,
+    MatInputModule,
+    MatGridListModule,
+    MatTooltipModule,
+    MatDialogModule,
+    MatTabsModule,
+    MatExpansionModule,
+    MatRippleModule,
+    MatChipsModule,
+    FlexLayoutModule,
+    ScrollToModule.forRoot(),
     ServiceWorkerModule.register('/ngsw-worker.js', {
       enabled: environment.production
     })

@@ -69,7 +69,7 @@ export class AuthService {
     return this.afAuth.auth
       .signInWithPopup(provider)
       .then(credential => {
-        this.notify.update('Welcome to Firestarter!!!', 'success');
+        this.notify.update('Welcome to andrews.codes!', 'success');
         return this.updateUserData(credential.user);
       })
       .catch(error => this.handleError(error));
@@ -81,7 +81,7 @@ export class AuthService {
     return this.afAuth.auth
       .signInAnonymously()
       .then(credential => {
-        this.notify.update('Welcome to Firestarter!!!', 'success');
+        this.notify.update('Welcome to andrews.codes!', 'success');
         return this.updateUserData(credential.user); // if using firestore
       })
       .catch(error => {
@@ -142,8 +142,8 @@ export class AuthService {
     const data: User = {
       uid: user.uid,
       email: user.email || null,
-      displayName: user.displayName || 'nameless user',
-      photoURL: user.photoURL || 'https://goo.gl/Fz9nrQ'
+      displayName: user.displayName || 'Anon',
+      photoURL: user.photoURL || 'https://api.adorable.io/avatars/100/andrews.codes.png'
     };
     return userRef.set(data);
   }

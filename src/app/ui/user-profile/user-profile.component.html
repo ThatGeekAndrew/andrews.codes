@@ -1,23 +1,38 @@
-<div class="box" >
-  <div *ngIf="auth.user | async; then authenticated else guest">
-          <!-- template will replace this div -->
-  </div>
+<div *ngIf="auth.user | async; then authenticated else guest">
+        <!-- template will replace this div -->
 </div>
 
 <!-- User NOT logged in -->
-<ng-template #guest class="box">
-  <h3>Howdy, GUEST</h3>
-  <p class="card-text">Login to get started...</p>
-  <button class="button" routerLink="/login">Login</button>
+<ng-template #guest>
+  <mat-card class="mat-elevation-z0">
+      <h3 class="mat-display-1">Create Account</h3>
+      <p class="mat-body-1">New here? Log in to begin!</p>
+  </mat-card>
+  <mat-divider></mat-divider>
+  <user-login></user-login>
 </ng-template>
 
 <!-- User logged in -->
 <ng-template #authenticated>
   <div *ngIf="auth.user | async as user">
-    <h3>Howdy, {{ user.displayName }}</h3>
-    <img class="card-img-top" [src]="user.photoURL || 'https://api.adorable.io/avatars/109/fire.png'" width=50px>
-    <p class="text-truncate">UID: {{ user.uid }}</p>
-    <button class="button" (click)="logout()">Logout</button>
+    <mat-card class="mat-elevation-z0">
+        <h3 class="mat-display-1 ">{{ user.displayName }}</h3>
+        <div class="user-info">
+          <img class="profile" [src]="user.photoURL || 'https://api.adorable.io/avatars/100/andrews.codes.png'" width="50px" height="50px">
+          <span class="mat-caption">UID: {{ user.uid }}</span>
+        </div>
+    </mat-card>
+    <mat-card class="mat-elevation-z0">
+        <p>Thanks for signing in! I am working hard to add stuff for you to do while on here.</p>
+        
+        <!-- <mat-checkbox color="warn">Notify me when new features are released</mat-checkbox> -->
+    </mat-card>
+    <mat-divider></mat-divider>
+    <mat-action-list>
+      <button mat-list-item (click)="logout()">
+        Log out
+      </button>
+    </mat-action-list>
   </div>
 </ng-template>
 
