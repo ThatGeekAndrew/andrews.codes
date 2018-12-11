@@ -46,7 +46,6 @@
     "@angular/language-service": "^7.0.2",
     "@cypress/webpack-preprocessor": "^2.0.1",
     "@types/chance": "^1.0.1",
-    "@types/greensock": "^1.15.32",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
