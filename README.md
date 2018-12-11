@@ -1,8 +1,10 @@
-# andrews.codes source
+# andrews.codes
 
 This may one day be a private repo but until then, cheers.
 
-- [LivPortfolio](https://firestarter-96e46.firebaseapp.com/)
+Note: This project uses the [Angular Firestarter](https://github.com/codediodeio/angular-firestarter) project as a base. Try it!
+
+- [Live Portfolio](https://andrews.codes/)
 - [Schedule Meeting](https://calendly.com/andrewscodes)
 
 ## Features
@@ -18,8 +20,8 @@ This may one day be a private repo but until then, cheers.
 
 1.  Run
 
-- `git clone https://github.com/codediodeio/angular-firestarter.git firestarter`
-- `cd firestarter`
+- `git clone https://github.com/geeksmarter/andrews.codes.git andrewsportfolio`
+- `cd andrewsportfolio`
 - `npm install`
 
 2.  Create a project at https://firebase.google.com/ and grab your web config:
