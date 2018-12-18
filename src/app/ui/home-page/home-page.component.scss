@@ -4,7 +4,6 @@
 //     linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%),
 //     url('/assets/images/laptop.jpg');
 
-
 .container {
     position: relative;
     margin: 0 auto;
@@ -92,11 +91,11 @@ h1, h2, h3 {
         display: inline-block;
     }
 
-    a.social, i, button {
+    .social, i, button {
         margin-right: 0.5rem;
     }
 
-    a.social {
+    .social {
         margin-bottom: 0.5rem;
     }
 
@@ -107,6 +106,41 @@ h1, h2, h3 {
 
     img {
         max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .introduction {
+        img {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .cta-buttons {
+            margin-bottom: 0.75rem;
+        }
+        .social-buttons {
+            text-align: center;
+        }
+        .social {
+            width: 95%;
+            margin: 5px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cdk-overlay-pane {
+        max-width: 90vw;
+    }
+
+    .mat-dialog-content {
+        padding: 0 7px;
+    }
+
+    .mat-dialog-actions,
+    .mat-dialog-title {
+        margin-left: -14px;
+        margin-right: -14px;
     }
 }
 

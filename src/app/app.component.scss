@@ -33,3 +33,9 @@ mat-sidenav-container {
 .footer {
   padding: 2.5rem 0;
 }
+
+@media screen and (max-width: 420px) {
+  .footer {
+    text-align: center;
+  }
+}

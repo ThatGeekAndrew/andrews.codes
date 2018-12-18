@@ -16,7 +16,7 @@
             <h2 class="mat-display-3">
                 Overview
             </h2>
-            <div>
+            <div class="cta-buttons">
                 <button (click)="viewSchedule()" class="meeting" mat-stroked-button color="primary">Schedule Meeting</button>
                 <a href="/assets/AndrewAlsanteResume.pdf" class="meeting" target="_blank" mat-flat-button color="primary">View Resume</a>
             </div>
@@ -161,7 +161,7 @@
                 </ng-template>
 
                 <div class="tabbed-content" fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
-                    <div>
+                    <div fxLayout="column" fxLayoutAlign="start center">
                         <img src="/assets/images/profile.jpg" class="mat-elevation-z2" alt="">
                     </div>
                     <div>
@@ -199,7 +199,7 @@
                 </ng-template>
 
                 <div class="tabbed-content" fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
-                    <div>
+                    <div fxLayout="column" fxLayoutAlign="start center">
                         <img src="/assets/images/connieandandrew.jpg" class="mat-elevation-z2" alt="">
                     </div>
                     <div>
@@ -281,22 +281,6 @@
     </div>
 </section>
 
-<!-- <section class="email-subscribe">
-    <div class="container">
-        <mat-card>
-            <img src="/assets/images/podium.svg" width="90px" alt="">
-            <div>
-                <h2 class="mat-display-1">I'm starting a blog!</h2>
-                <p class="caption">Get notified when I release new content on <a href="https://www.geeksmarter.com/">Geek Smarter</a>.</p>
-                <mat-form-field class="full-width">
-                    <input matInput type="email" placeholder="Email Address">
-                </mat-form-field>
-                <button mat-raised-button color="primary">Subscribe</button>
-            </div>
-        </mat-card>
-    </div>
-</section> -->
-
 <ng-template #caseView>
     <h2 mat-dialog-title>{{ caseStudy.name }}</h2>
     <div mat-dialog-content fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
@@ -307,7 +291,7 @@
             <h3>Overview</h3>
             <p *ngIf="caseStudy.date_start">{{ caseStudy.date_start | date : mediumDate }} - {{ caseStudy.date_end | date : mediumDate }}</p>
             <p *ngIf="caseStudy.overview">{{ caseStudy.overview }}</p>
-            <mat-chip-list>
+            <mat-chip-list focused="false" selectable="false">
                 <mat-chip *ngFor="let cat of caseStudy.categories" color="accent">{{ cat }}</mat-chip>
             </mat-chip-list>
                 
@@ -335,6 +319,11 @@
         <a *ngIf="caseStudy.url" href="{{ caseStudy.url }}" target="_blank" mat-raised-button color="primary">
             <mat-icon>link</mat-icon>
             View Project
+        </a>
+
+        <a *ngIf="!caseStudy.url" mat-raised-button color="primary" disabled="disabled">
+            <mat-icon>link_off</mat-icon>
+            No Link
         </a>
     </mat-dialog-actions>
 </ng-template>
