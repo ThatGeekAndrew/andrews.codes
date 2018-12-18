@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { UserProfileService } from '../user-profile/user-profile.service';
 
 @Component({
   selector: 'main-nav',
@@ -9,14 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class MainNavComponent {
 
   constructor() { }
-  // private sidenav: UserProfileService ^
+
   opened: boolean;
   
   toggleSidenav() {
     this.opened = !this.opened;
-    // this.sidenav.toggle();
-
-    // console.log(this.opened);
   }
 
 }
