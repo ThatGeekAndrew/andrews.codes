@@ -47,6 +47,7 @@ import {
   MatExpansionModule,
   MatRippleModule,
   MatChipsModule,
+  MatSnackBarModule,
 } from '@angular/material';
 
 // IMPORTANT
@@ -86,6 +87,7 @@ import {
     MatExpansionModule,
     MatRippleModule,
     MatChipsModule,
+    MatSnackBarModule,
     FlexLayoutModule,
     ScrollToModule.forRoot(),
     ServiceWorkerModule.register('/ngsw-worker.js', {

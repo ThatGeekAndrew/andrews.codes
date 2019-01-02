@@ -35,6 +35,7 @@ import {
   MatExpansionModule,
   MatRippleModule,
   MatChipsModule,
+  MatSnackBarModule,
 } from '@angular/material';
 
 @NgModule({
@@ -60,6 +61,7 @@ import {
     MatExpansionModule,
     MatRippleModule,
     MatChipsModule,
+    MatSnackBarModule,
     FlexLayoutModule,
     ScrollToModule.forRoot(),
   ],
