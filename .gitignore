@@ -1,13 +1,5 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
-.firebase
-firestore.indexes.json
-database.rules.json
-firestore.rules
-storage.rules
-
-/src/environments/
-
-prerender.ts 
+/src/environments
 
 # compiled output
 /dist
