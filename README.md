@@ -5,7 +5,6 @@ This may one day be a private repo but until then, cheers.
 Note: This project uses the [Angular Firestarter](https://github.com/codediodeio/angular-firestarter) project as a base. Try it!
 
 - [Live Portfolio](https://andrews.codes/)
-- [Schedule Meeting](https://calendly.com/andrewscodes)
 
 ## Features
 

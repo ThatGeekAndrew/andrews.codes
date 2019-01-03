@@ -2,10 +2,10 @@
     <div class="container">
         <h1 class="mat-display-4">Andrew Alsante</h1>
         <p class="mat-lead">Web Application Developer, Designer & Consultant</p>
-        <button [ngx-scroll-to]="'#intro'" mat-button color="default">Learn More</button>
-        <button (click)="viewSchedule()" mat-raised-button color="accent">Schedule Meeting</button>
-
-
+        <button [ngx-scroll-to]="'#intro'" mat-raised-button color="accent">
+            About Me
+            <i class="fas fa-chevron-down"></i>
+        </button>
         <!-- <div #hoverLaptop class="slide laptop"></div>
         <div #hoverIcon class="slide hover-icon"></div> -->
     </div>
@@ -17,8 +17,7 @@
                 Overview
             </h2>
             <div class="cta-buttons">
-                <button (click)="viewSchedule()" class="meeting" mat-stroked-button color="primary">Schedule Meeting</button>
-                <a href="/assets/AndrewAlsanteResume.pdf" class="meeting" target="_blank" mat-flat-button color="primary">View Resume</a>
+                    <a href="/assets/AndrewAlsanteResume.pdf" class="meeting" target="_blank" mat-flat-button color="primary">View Resume</a>
             </div>
         </div>
         <mat-tab-group mat-align-tabs="start">
@@ -80,10 +79,10 @@
                                 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" matTooltip="Learn about CSS">
                                     <i style="color: royalblue" class="fab fa-css3-alt"></i>
                                 </a>
-                                <a href="https://wordpress.com/" target="_blank" matTooltip="Learn about Sass">
+                                <a href="https://sass-lang.com/" target="_blank" matTooltip="Learn about Sass">
                                     <i style="color: magenta" class="fab fa-sass"></i>
                                 </a>
-                                <a href="https://wordpress.com/" target="_blank" matTooltip="Learn about Less">
+                                <a href="https://en.wikipedia.org/wiki/Less_(stylesheet_language)" target="_blank" matTooltip="Learn about Less">
                                     <i style="color: darkslategray" class="fab fa-less"></i>
                                 </a>
                                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" matTooltip="Learn about JavaScript">
@@ -204,7 +203,7 @@
                     </div>
                     <div>
                         <p>
-                            I am 27 years old and live in Upstate New York with my girlfriend, Connie. I play <a href="https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal.ws?user1=level-123">Old School RuneScape</a>, and occasionally go on Xbox Live. Sometimes I will <em title="AKA: Memes">create original content for the internet</em>. Every now and then I contribute to Facebook's 1337 language  translations, which end up in front of 25+ million users per month.
+                            I am 27 years old and live in Upstate New York with my girlfriend, Connie. I play <a href="https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal.ws?user1=level-123" target="_blank">Old School RuneScape</a>, and occasionally go on Xbox Live. Sometimes I will <em title="AKA: Memes">create original content for the internet</em>. Every now and then I contribute to Facebook's 1337 language  translations, which end up in front of 25+ million users per month.
                         </p>
         
                         <p>These profiles are just for fun:</p>
@@ -325,15 +324,5 @@
             <mat-icon>link_off</mat-icon>
             No Link
         </a>
-    </mat-dialog-actions>
-</ng-template>
-
-<ng-template #scheduleMeeting>
-    <h2 mat-dialog-title>Schedule a meeting with Andrew!</h2>
-    <div class="iframe-dialog" mat-dialog-content>
-        <iframe class="calendly-frame" src="https://calendly.com/andrewscodes" frameborder="0"></iframe>
-    </div>
-    <mat-dialog-actions align="end">
-        <button mat-button mat-dialog-close>No Thanks</button>
     </mat-dialog-actions>
 </ng-template>
